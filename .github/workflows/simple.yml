@@ -1,7 +1,7 @@
 name: Shell commands
 on: [push]
 jobs:
-  nombre-del-job:
+  shell-en-python:
     runs-on: ubuntu-latest
     steps:
       - name: echoString
@@ -15,9 +15,10 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-        
+
   shell-en-windows:
     runs-on: windows-latest
+    needs: shell-en-python
     steps:
       - name: Powershell
         run: Get-Location
