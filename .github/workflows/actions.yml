@@ -1,0 +1,12 @@
+name: Actions workflosws
+on: [push]
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout git
+        uses: actions/checkout@v1
+      - name: List files after checkout
+        run: |
+          pwd
+          ls
