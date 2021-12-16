@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout git
-        uses: actions/checkout@v1
+        uses: actions/life-resume@v1
       - name: List files after checkout
         run: |
           pwd
